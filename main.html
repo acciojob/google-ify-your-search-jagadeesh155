@@ -1,56 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Clone</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Clone</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <div id="navbar">
-    <a href="#">Gmail</a>
-    <a href="#">Images</a>
-    <div id="apps">
-      <span></span><span></span><span></span>
-      <span></span><span></span><span></span>
-      <span></span><span></span><span></span>
+    <!-- Navbar -->
+    <div id="navbar">
+        <a href="#">Gmail</a>
+        <a href="#">Images</a>
+        <button id="signInBtn">Sign in</button>
     </div>
-    <button id="signInBtn">Sign in</button>
-  </div>
 
-  <!-- Main -->
-  <div id="main">
-    <img id="googleLogo" 
-         src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" 
-         alt="Google Logo">
-    
-    <div id="searchBox">
-      <input type="text" id="searchBar" placeholder="Search Google or type a URL">
-      <!-- ✅ Exact Google Mic -->
-      <img id="micIcon" 
-           src="https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png" 
-           alt="Google Mic">
+    <!-- Main Search Area -->
+    <div id="main">
+        <img id="googleLogo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
+        <div id="searchBox">
+            <input type="text" id="searchBar" placeholder="Search Google or type a URL">
+            <img id="micIcon" src="mic_icon_url" alt="Google Mic">
+        </div>
+        <div id="buttons">
+            <button id="searchBtn">Google Search</button>
+            <button id="luckyBtn">I'm Feeling Lucky</button>
+        </div>
     </div>
-    
-    <div id="buttons">
-      <button id="searchBtn">Google Search</button>
-      <button id="luckyBtn">I'm Feeling Lucky</button>
-    </div>
-  </div>
 
-  <!-- Footer -->
-  <div id="footer">
-    <div class="left">India</div>
-    <div class="right">
-      <a href="#">About</a>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Settings</a>
+    <!-- Footer -->
+    <div id="footer">
+        <div class="left">India</div>
+        <div class="right">
+            <a href="#">About</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Settings</a>
+        </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
