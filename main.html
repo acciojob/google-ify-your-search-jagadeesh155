@@ -1,12 +1,143 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Google Clone</title>
+  <style>
+    :root{
+      --text:#5f6368;
+      --blue:#1a73e8;
+      --border:#dcdcdc;
+      --footer:#f2f2f2;
+      --btn-bg:#f8f9fa;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      color:var(--text);
+    }
 
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+    /* NAVBAR */
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px 20px;
+    }
+    .nav-left img{
+      height:28px;
+    }
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      font-size:14px;
+    }
+    .nav-right a{
+      color:var(--text);
+      text-decoration:none;
+    }
+    .nav-right a:hover{ text-decoration:underline; }
 
-  <body>
-    <!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js"></script>
-  </body>
+    /* 3x3 apps grid icon */
+    .apps{
+      width:20px; height:20px; display:grid;
+      grid-template-columns:repeat(3, 4px);
+      grid-auto-rows:4px; gap:3px; cursor:pointer;
+    }
+    .apps span{
+      width:4px; height:4px; border-radius:50%;
+      background:var(--text); display:block;
+    }
+
+    .sign-in{
+      padding:8px 16px; background:var(--blue);
+      color:#fff; border:none; border-radius:4px;
+      font-weight:700; cursor:pointer;
+    }
+
+    /* MAIN */
+    .main{
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      flex:1; padding:0 16px;
+    }
+    .main img{ width:272px; margin-bottom:22px; }
+
+    .search{
+      border:1px solid var(--border);
+      border-radius:24px; padding:10px 16px;
+      width:560px; max-width:95%;
+      display:flex; align-items:center; gap:10px;
+      margin-bottom:22px;
+    }
+    .search input{
+      border:none; outline:none; flex:1; font-size:16px;
+    }
+    .buttons button{
+      margin:6px; padding:10px 18px; border-radius:4px;
+      border:1px solid transparent; background:var(--btn-bg);
+      cursor:pointer; color:#3c4043;
+    }
+    .buttons button:hover{ border-color:#dadce0; }
+
+    /* FOOTER */
+    .footer{
+      background:var(--footer);
+      padding:12px 20px; display:flex;
+      justify-content:space-between; align-items:center;
+      font-size:14px;
+    }
+    .footer a{ color:var(--text); text-decoration:none; margin-left:16px; }
+    .footer a:hover{ text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google">
+    </div>
+    <nav class="nav-right">
+      <a href="#">Gmail</a>
+      <a href="#">Images</a>
+      <div class="apps" aria-label="Google apps" title="Google apps">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+      <button class="sign-in">Sign in</button>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    <div class="search">
+      <input type="text" placeholder="Search Google or type a URL" aria-label="Search">
+    </div>
+    <div class="buttons">
+      <button>Google Search</button>
+      <button>I'm Feeling Lucky</button>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="left">India</div>
+    <div class="right">
+      <a href="https://policies.google.com/privacy">Privacy</a>
+      <a href="https://policies.google.com/terms">Terms</a>
+      <a href="#">Settings</a>
+    </div>
+  </footer>
+
+</body>
 </html>
