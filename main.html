@@ -4,163 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google Clone</title>
-  <style>
-    :root {
-      --text:#5f6368;
-      --blue:#1a73e8;
-      --border:#dcdcdc;
-      --footer:#f2f2f2;
-      --btn-bg:#f8f9fa;
-    }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      color:var(--text);
-    }
-
-    /* NAVBAR */
-    .navbar {
-      display:flex;
-      justify-content:flex-end;
-      align-items:center;
-      padding:12px 20px;
-      font-size:14px;
-    }
-    .navbar a {
-      margin:0 10px;
-      text-decoration:none;
-      color:var(--text);
-    }
-    .navbar a:hover { text-decoration:underline; }
-
-    .apps {
-      width:20px; height:20px;
-      display:grid;
-      grid-template-columns:repeat(3, 4px);
-      grid-auto-rows:4px; gap:3px;
-      cursor:pointer;
-      margin:0 12px;
-    }
-    .apps span {
-      width:4px; height:4px;
-      border-radius:50%; background:var(--text);
-    }
-    .sign-in {
-      padding:8px 16px;
-      background:var(--blue);
-      border:none;
-      border-radius:4px;
-      color:white;
-      font-weight:600;
-      cursor:pointer;
-    }
-
-    /* MAIN */
-    .main {
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      flex:1;
-    }
-    .main img {
-      width:272px;
-      margin-bottom:22px;
-    }
-    .search {
-      display:flex;
-      align-items:center;
-      border:1px solid var(--border);
-      border-radius:24px;
-      padding:8px 14px;
-      width:560px; max-width:90%;
-      margin-bottom:22px;
-      background:white;
-    }
-    .search input {
-      flex:1;
-      border:none; outline:none;
-      font-size:16px;
-      padding:6px 10px;
-    }
-    .mic-icon {
-      font-size:18px;
-      margin-left:10px;
-      cursor:pointer;
-      color:#9aa0a6;
-    }
-    .buttons button {
-      margin:6px;
-      padding:10px 18px;
-      border-radius:4px;
-      border:1px solid transparent;
-      background:var(--btn-bg);
-      cursor:pointer;
-      color:#3c4043;
-      font-size:14px;
-    }
-    .buttons button:hover { border-color:#dadce0; }
-
-    /* FOOTER */
-    .footer {
-      background:var(--footer);
-      padding:12px 20px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      font-size:14px;
-    }
-    .footer a {
-      margin-left:16px;
-      text-decoration:none;
-      color:var(--text);
-    }
-    .footer a:hover { text-decoration:underline; }
-  </style>
-  <!-- Google Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <div class="navbar">
+  <div id="navbar">
     <a href="#">Gmail</a>
     <a href="#">Images</a>
-    <div class="apps">
+    <div id="apps">
       <span></span><span></span><span></span>
       <span></span><span></span><span></span>
       <span></span><span></span><span></span>
     </div>
-    <button class="sign-in">Sign in</button>
+    <button id="signInBtn">Sign in</button>
   </div>
 
   <!-- Main -->
-  <div class="main">
-    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
-    <div class="search">
-      <input type="text" placeholder="Search Google or type a URL">
-      <span class="material-icons mic-icon">mic</span>
+  <div id="main">
+    <img id="googleLogo" 
+         src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" 
+         alt="Google Logo">
+    
+    <div id="searchBox">
+      <input type="text" id="searchBar" placeholder="Search Google or type a URL">
+      <!-- ✅ Exact Google Mic -->
+      <img id="micIcon" 
+           src="https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png" 
+           alt="Google Mic">
     </div>
-    <div class="buttons">
-      <button>Google Search</button>
-      <button>I'm Feeling Lucky</button>
+    
+    <div id="buttons">
+      <button id="searchBtn">Google Search</button>
+      <button id="luckyBtn">I'm Feeling Lucky</button>
     </div>
   </div>
 
   <!-- Footer -->
-  <div class="footer">
+  <div id="footer">
     <div class="left">India</div>
     <div class="right">
       <a href="#">About</a>
-      <a href="https://policies.google.com/privacy">Privacy</a>
-      <a href="https://policies.google.com/terms">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
       <a href="#">Settings</a>
     </div>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
